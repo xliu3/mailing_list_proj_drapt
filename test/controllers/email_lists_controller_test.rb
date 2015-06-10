@@ -18,7 +18,7 @@ class EmailListsControllerTest < ActionController::TestCase
 
   test "should create email_list" do
     assert_difference('EmailList.count') do
-      post :create, email_list: {  }
+      post :create, email_list: @update
     end
 
     assert_redirected_to email_list_path(assigns(:email_list))
@@ -35,7 +35,7 @@ class EmailListsControllerTest < ActionController::TestCase
   end
 
   test "should update email_list" do
-    patch :update, id: @email_list, email_list: {  }
+    patch :update, id: @email_list, email_list: { user_account_id: @email_list.user_account_id, mailing_list_id: @email_list.mailing_list_id }
     assert_redirected_to email_list_path(assigns(:email_list))
   end
 
@@ -44,6 +44,6 @@ class EmailListsControllerTest < ActionController::TestCase
       delete :destroy, id: @email_list
     end
 
-    assert_redirected_to email_lists_path
+    assert_redirected_to mailing_lists_path
   end
 end

@@ -19,4 +19,6 @@ class MailingListTest < ActiveSupport::TestCase
   	assert mailing_list.invalid?
   	assert_equal ["has already been taken"], mailing_list.errors[:name]
   end
+
+  
 end

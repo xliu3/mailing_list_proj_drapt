@@ -5,11 +5,11 @@
 # below each fixture, per the syntax in the comments below
 #
 one: 
-  user_account_id: one
-  mailing_list_id: one
+  mailing_list_id: mail
+  user_account_id: two
 # column: value
 #
 two: 
-  user_account_id: one
   mailing_list_id: mail
+  user_account_id: one
 #  column: value
