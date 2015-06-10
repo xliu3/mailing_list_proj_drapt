@@ -1,5 +1,5 @@
 class UserAccount < ActiveRecord::Base
-	has_many :email_lists
+	has_many :email_lists, dependent: :destroy
 	has_many :mailing_lists, through: :email_lists
 
 	def add_to_mailing_list(mailing_list)

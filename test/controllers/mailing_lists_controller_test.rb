@@ -3,6 +3,7 @@ require 'test_helper'
 class MailingListsControllerTest < ActionController::TestCase
   setup do
     @mailing_list = mailing_lists(:one)
+    @user_account = user_accounts(:one)
     @update = {
       name: 'UMass Parking Service test',
       description: 'Members of Umass Parking Service Department'
@@ -50,5 +51,9 @@ class MailingListsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to mailing_lists_path
+  end
+
+  test "should add user_account to mailing list" do
+
   end
 end

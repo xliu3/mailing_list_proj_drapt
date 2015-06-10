@@ -1,5 +1,5 @@
 class MailingList < ActiveRecord::Base
-	has_many :email_lists
+	has_many :email_lists, dependent: :destroy
 
 	validates :name, :description, presence: true
 	validates :name, uniqueness: true

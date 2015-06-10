@@ -56,7 +56,7 @@ class EmailListsController < ApplicationController
   def destroy
     @email_list.destroy
     respond_to do |format|
-      format.html { redirect_to email_lists_url, notice: 'Email list was successfully destroyed.' }
+      format.html { redirect_to mailing_lists_url }
       format.json { head :no_content }
     end
   end

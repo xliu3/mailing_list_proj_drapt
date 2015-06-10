@@ -29,7 +29,10 @@ class MailingListsController < ApplicationController
     if params[:set_users]
       user_account = UserAccount.find(params[:set_users].to_i)
       @email_lists = user_account.add_to_mailing_list(@mailing_list)
-
+      respond_to do |format|
+      format.html { redirect_to @mailing_list }
+      format.json { head :no_content }
+    end
     end
     
   end

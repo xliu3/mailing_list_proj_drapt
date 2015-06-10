@@ -1,28 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-	<strong>Name:</strong>
+	<strong>Mailing List Name:</strong>
 	<%= @mailing_list.name %>
 </p>
 
 <p>
-	<strong>Description:</strong>
+	<strong>Mailing List Description:</strong>
 	<%= @mailing_list.description %>
 </p>
 
 <p>
-	<strong>List of Email in the List</strong>
+	<strong>List of Email in the List:</strong>
 <table>
 	<tbody>
 		<% @email_lists.each do |email_list| %>
 			<tr>
 			  <td><%= email_list.user_account.full_name %></td>
 			  <td><%= email_list.user_account.user_email %></td>
+			  <td><%= link_to 'Remove', email_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 </p>
 
-<%= link_to 'Edit', edit_mailing_list_path(@mailing_list) %> |
+<%= link_to 'Edit Mailing List', edit_mailing_list_path(@mailing_list) %> |
 <%= link_to 'Back', mailing_lists_path %>
