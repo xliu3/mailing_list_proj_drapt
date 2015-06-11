@@ -13,7 +13,14 @@
 <p>
 	<strong>List of Email in the List:</strong>
 <table>
+
 	<tbody>
+		<tr class = form-label>
+			<td>User Account Name</td>
+			<td>Email Address</td>
+			<td></td>
+		</tr>
+		<th colspan="3"></th>
 		<% @email_lists.each do |email_list| %>
 			<tr>
 			  <td><%= email_list.user_account.full_name %></td>

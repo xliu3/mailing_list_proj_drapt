@@ -1,9 +1,13 @@
 <h1>Add User Acounts</h1>
 
 <%= form_tag add_users_mailing_list_path, :method => :get, class: 'get_users' do %>
-	<%= label_tag 'user_select', 'Please Select a User account to the Mailing List' %>
-	<%= select_tag "set_users", options_from_collection_for_select(@user_accounts, 'id', 'usr_first_name', selected: params[:set_users]) %>
-	<%= submit_tag 'add' %> 
+    <div class = form-label>
+		<%= label_tag 'user_select', 'Please Select a User account to the Mailing List' %>
+	</div>
+	<%= select_tag "set_users", options_from_collection_for_select(@user_accounts, 'id', 'full_name', selected: params[:set_users]) %>
+	<div class = button>
+		<%= submit_tag 'add' %> 
+	</div>
 
 <% end %>
 

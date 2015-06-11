@@ -10,13 +10,13 @@ form .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .gr
 }
 
 table {
-  width: 100%;
+  width: 50%;
 }
 
 thead th, th {
   background: #f7f7f7;
   border-bottom: 1px solid #ccc;
-  color: #333;
+  color: #200;
 }
 
 td, th {
@@ -68,7 +68,7 @@ td ul.links {
 
 .form-label {
 	font-weight: bold;
-	text-align:right;
+	text-align:left;
 }
 .validation-errors {
 	color:red;
@@ -78,4 +78,5 @@ td ul.links {
 .form-actions button {
   margin-right:0.5em;
   align:left;
+  color: #200;
 }
